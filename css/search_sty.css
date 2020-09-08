@@ -1,0 +1,525 @@
+/* CSS Document */
+body{
+	margin: 0;
+	padding: 0;
+}
+nav {
+	position: fixed;
+	top:0px;
+	left: 0px;
+	width: 100%;
+	height: 2.5px;
+	padding: 10px 4em;
+	box-sizing: border-box;
+	transition: 0.3s;
+	z-index: 99;
+}
+nav.black{
+	background: rgba(0,0,0,0.8);
+	height: 4.5em;
+	padding: 10px 100px;
+}
+nav .logo{
+	padding: 22px 20px;
+	height: 8px;
+	float: left;
+	font-size: 2em;
+	transition: 0.3s;
+}
+nav img{
+	margin: 0px;
+	padding: 0px;
+	height: 50px;
+	float: left;
+}
+nav h1{
+	margin: 0px;
+	padding: 0px;
+	font-family:"fjalla one";
+	font-size: 1.3em;
+	float: left;
+	color: dodgerblue;
+	line-height: 3em;
+}
+nav.black.logo{
+	color: #fff;
+}
+nav ul{
+	list-style: none;
+	float: right;
+	margin: 0px;
+	padding: 0px;
+	display:flex;
+	line-height: 3em;
+}
+nav ul li {
+	list-style: none;
+	font-family: "exo 2";
+	font-size: 1em;
+	transition: 0.3s;
+	color: dodgerblue;
+	font-weight: bold;
+}
+nav ul li a {
+	line-height: 1em;
+	color: black;
+	padding: 0px 1.2em;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: 0.3s;
+	font-family: "exo 2";
+	font-size: 1em;
+}
+nav ul li :hover{
+	transform: scale(1.2);
+	font-size: 1.2em;
+	cursor: pointer;
+}
+nav.black ul li a {
+	color: #fff;
+	
+}
+nav ul li a:focus{
+	outline:none;
+	
+}
+nav ul li a.login{
+	background: #E2472F;
+	color:#fff;
+	border-radius: 6px;
+}
+.navhighlight{
+	background-color: dodgerblue;
+}
+section.sec1{
+	width: 100%;
+	height: 30vh;
+	background: url(../res/bg_1.jpg);
+	background-size: cover;
+	background-position: top;
+}
+.banner{
+	position: absolute;
+	top:20%;
+	left: 10%;
+	color: #fff;
+}
+#MainMenu{
+    height: 100vh;
+    width: 300px;
+    background-color: #181818;
+    -webkit-clip-path:polygon(0 0,0% 100%,0% 100%,100% 100%);
+    position: fixed;
+    top:0px;
+    right:-300px;
+    transition: all .5s ease-in-out;
+	z-index: 100;
+}	
+#social_media tr td{
+		display: inline-block;
+		margin: 0px 0.8em;
+	}
+#social_media svg{
+		height: 32px;
+		cursor: pointer;
+		fill: dodgerblue;
+	}
+.rotateimg{
+	-webkit-transform: rotate(360deg);
+	transform: rotate(360deg);
+-webkit-transition: all 0.7s ease;
+transition: all 0.7s ease;
+}
+/* button style */
+
+	.btn{
+		height:30px;
+		width: 100px;
+		background-color:royalblue;
+		outline: none;
+		border: 1px solid whitesmoke;
+		position: absolute;
+		top:50%;
+		left:50%;
+		transform: translate(-50%,-50%);
+		border-radius: 3px;
+		font-family:'fjalla one';
+		font-weight: bolder;
+		color: #2d2d2d;
+		cursor: pointer;
+		overflow: hidden;
+		letter-spacing: 0.1em;
+		
+	}
+	.btn:before{
+		content:'';
+		height:45px;
+		width:0px;
+		background-color: whitesmoke;
+		position: absolute;
+		top:50%;
+		left:50%;
+		transform: translate(-50%,-50%) skewX(-25deg);
+		z-index: -1;
+		transition: all .4s;
+	}
+	.btn:hover:before{
+		width: 240px;
+	}
+
+.login_signup{
+	display: block;
+	height: 100vh;
+	width: 100%;
+	margin: 0 auto;
+	box-shadow: -20px 0px 99em 0px black;
+}
+.login{
+	display: block;
+	text-align: center;
+}
+.signup{
+	display: block;
+	text-align: center;
+}
+.login_signup table{
+	width: 100%;
+	font-family: "exo 2";
+}
+.login table tr:nth-child(4){
+	text-align: right;
+}
+.login table tr:nth-child(4) a{
+	color: floralwhite;
+}
+.signUpMsg{
+	color: #fff;
+}
+.login_signup .title{
+	margin-top: 3em;
+	text-align: center;
+	font-family: "fjalla One";
+	font-size: 2.5em;
+	color: #fff;
+}
+.login_signup hr{
+	width: 5em;
+	height: 5px;
+	color: royalblue;
+	border-radius: 2em;
+}
+.login_signup input[type="text"]
+,input[type="password"]{
+	width: 200px;
+	height: 40px;
+	color: #fff;
+	border: none;
+	border-bottom: 1px solid #222;
+	font-family: "exo 2";
+	background: none;
+	font-weight: bold;
+}
+.login_signup input[type="submit"]
+{
+    margin-bottom: 28px;
+    width: 120px;
+    height: 32px;
+    background: royalblue;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    font-family: "exo 2";
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.2s ease;
+    cursor: pointer;
+	margin: 0 auto;
+}
+.login_signup input[type="submit"]:hover,
+input[type="submit"]:focus
+{
+    background: #ff5722;
+    transition: 0.2s ease;
+}
+#close{
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translate(-50%);
+}
+#close:hover{
+    cursor: pointer;
+}
+.search_bar{
+	float: right;
+	margin: -5.6em 0 0;
+	background: #fff;
+	width: 60%;
+}
+.search_bar input[type="text"]{
+	width: 15em;
+	height: 5em;
+	border: none;
+	font-family: "exo 2";
+	font-weight: bold;
+	text-align: center
+}
+.search_bar select{
+	width: 15em;
+	height: 5em;
+	border: none;
+	font-family: "exo 2";
+	font-weight: bold;
+	text-align: center
+}
+.search_bar input[type="submit"]{
+    margin-bottom: 28px;
+    width: 150px;
+    height: 50px;
+    background: royalblue;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    font-family: "exo 2";
+	font-size: 1.5em;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.2s ease;
+    cursor: pointer;
+	margin: 0 2em;
+}
+.search_bar input[type="submit"]:hover,
+input[type="submit"]:focus{
+    background: #ff5722;
+    transition: 0.2s ease;
+}
+.searchbtn{
+	position: inherit;
+	transform: translate(0%,0%);
+    width: 150px;
+    height: 50px;
+    background: royalblue;
+    border-radius: 2px;
+	color: #fff;
+    font-family: "exo 2";
+	font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.2s ease;
+    cursor: pointer;
+	letter-spacing: inherit;
+	
+}
+.searchbtn:hover{
+	color: #000;
+}
+/* Footer  Styles*/
+
+	footer{
+		background-color: #fff;
+		position: relative;
+		margin-top: 1000px;
+	}
+	.footerbackgrnd{
+	background-color: #181818;
+	position: absolute;
+	bottom:0px;
+	height: 300px;
+	width: 100%;
+	overflow: hidden;
+}
+	.footerhead{
+		text-align: center;
+		font-family: 'fjalla one';
+		font-weight: bold;
+		font-size: 1.5em;
+		padding-top: 1.5em;
+		float: left;
+		width: 50%;
+		color: #fff;
+	}
+	.footerhead.week{
+		font-size: 1em;
+		position: absolute;
+		left:25%;
+		top:11.5em;
+	}
+	.stline{
+		width: 3.2em;
+		position: absolute;
+		top:9.5em;
+		left: 49%;
+		transform: rotate(90deg);
+	}
+	.sideline{
+		float: left;
+		margin-top: 2.35em;
+		width: 15%;
+	}
+	.sideline:first-child{
+		margin-left: 10%;
+	}
+	.ftimglinks{
+		position:absolute;
+		top:75px;
+		left:50%;
+		height: 20px;
+		width: 20px;
+		fill:dodgerblue;
+	}
+	.ftimglinks:first-of-type{
+		left:30%;
+	}
+	.ftimglinks:last-of-type{
+		left:70%;
+	}
+	.footerlinks{
+		position: absolute;
+		top:10em;
+		font-family: 'century gothic';
+		font-size: 0.8em;
+		line-height: 0.8em;
+	}
+	.footerlinks.right{
+		text-align: left;
+		left: 70%;
+	}
+	.footerlinks.left{
+		right: 68.5%;
+		text-align: right;
+	}
+	.footerlinks.bottom{
+	top: 18em;
+	right: 10%;
+}
+	.footerlinks>p>a{
+		text-decoration: none;
+		color: #fff;
+}
+	.btn a{
+		text-decoration: none;
+		color:black;
+	}
+	.btn.mail{
+		top:22.5em;
+		width: 15em;
+		height: 2.5em;
+		background-color: whitesmoke;
+		border: solid 0.5px black;
+		font-size: 0.7em;
+		border-radius: 0px;
+	}
+	.btn.mail:before{
+		background-color: royalblue;
+	}
+	.btn.subs{
+		top:25em;
+		width: 15em;
+		height: 2.5em;
+		background-color: whitesmoke;
+		border: solid 0.5px black;
+		border-radius: 0px;
+		font-size: 0.7em;
+		margin-bottom: 2em;
+	}
+	.btn.subs:before{
+		background-color: royalblue;
+	}
+.results{
+	margin: 5em auto;
+	float: left;
+	width: 60%;
+}
+.results h2{
+	font-family: "fjalla one";
+	text-align: center;
+	margin: 0 0 50px;
+}
+.listing {
+	height: 300px;
+	float: left;
+	box-shadow: 2px 2px 50px 5px #000;
+	width: 90%;
+	margin: 0 50px;
+}
+.results img{
+	float: left;
+	height: 300px;
+	width: 300px;
+}
+.listing h3{
+	font-family: "exo 2";
+	font-size: 1em;
+	margin-left: 325px;
+}
+.listing h4{
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	text-align: left;
+	font-size: 0.8em;
+	margin-left: 325px;
+}
+.listing p{
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	text-align: left;
+	width: 30%;
+	font-size: 0.8em;
+	margin-left: 325px;
+	
+}
+.userinfo{
+	margin-left: 325px;
+}
+.userinfo img{
+	height: 70px;
+	width: 70px;
+}
+.userinfo p{
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	text-align: center;
+	margin: 40px 0;
+}
+.listing ul p{
+	margin-top: 60px;
+	margin-bottom: 30px;
+}
+.listing ul {
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	list-style: none;
+	margin: -40px 0 0;
+}
+.listing li{
+	fill:dodgerblue;
+	height: 30px;
+	width: 30px;
+	float: left;
+	margin:0px 5px 0px;
+}
+.flatinfo{
+	float: right;
+	margin-top: -140px;
+}
+.flatinfo h3{
+	margin-top: -140px;
+	transform: translate(-50%);
+}
+.flatinfo h3 + p{
+	transform: translate(-25%,-100%);
+}
+.flatinfo svg + p{
+	text-align: center;
+	transform: translate(-55%);
+}
+.flatinfo hr{
+	transform: rotate(90deg);
+	width: 50%;
+}
+.flatinfo svg{
+	float: right;
+	margin-right: 20%;
+}
+.flatinfo button{
+	position: relative;
+	float: right;
+	top:100px;
+	left: 110px;
+}
